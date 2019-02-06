@@ -15,7 +15,7 @@ object TotalOrderInstances {
 
 object Comparator {
   @annotation.implicitNotFound("No instance of TotalOrder found")
-  def less[A](lhs:A, rhs:A)(implicit order: TotalOrder[A]) = {
+  def less[A](lhs: A, rhs: A)(implicit order: TotalOrder[A]) = {
     order.less(lhs, rhs)
   }
 }
